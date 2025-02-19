@@ -1,0 +1,56 @@
+*{
+    text-decoration: none;
+   
+}
+
+body{
+    background-color: #101541;
+    padding-top: 50px;
+}
+
+/*styling the login and Registration page*/
+
+.login{
+    
+    margin: auto;
+    background-color: #0085a0;
+    width: 40%;
+    padding-left: 50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 5px;
+    color: white;
+    font-family: sans-serif;
+    
+}
+
+/* Centering and styxling the login page header */
+
+h1{
+    text-align: center;
+    color: #101541;
+}
+
+/* Styling for login and register button */
+.btn{
+    background-color: #101541;
+    width: 50%;
+    height: 30px;
+    margin-left: 100px;
+    color: white;
+    border: 2px solid white;
+    border-radius: 5px;
+}
+
+.btn:hover{
+    background-color: inherit;
+
+}
+
+input[type="text"],input[type="email"],input[type="password"],input[type="tel"],input[type="number"],select{
+    width: 70%;
+    border-radius: 10px;
+    height: 30px;
+    margin-bottom: 20px;
+    border-width: 2px;
+} 
