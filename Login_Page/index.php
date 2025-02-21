@@ -1,9 +1,21 @@
+<?php
+if(isset($_POST["submit"])){
+    $name = $_POST["name"];
+    $username = $_POST["username"];
+    $email = $_POST["email"];
+    $password = $_POST["password"];
+    $password_confirm = $_POST[""];
+    $duplicate = mysqli_query($cons, "SELECT * FROM "); //where i've left from
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register and Login</title>
+    <title>Register</title>
 
     <!-- linking the script
       the defer attribute tells the browser to wait until the entire HTML page is loaded before running the JavaScript file (js/index.js) -->
@@ -14,7 +26,7 @@
 <body>
     <div class="login">
         
-        <form id="form" action="" method="post">
+        <form id="form" action="" method="POST" autocomplete="off">
             <h1>Register</h1>
 
             <!-- Asking for new user details -->
@@ -45,8 +57,8 @@
             </div>
 
             <div class="input-control">
-                <label for="password2">Confirm Password</label><br>
-                <input type="password" id="password2" placeholder="Confirm Password..." required="required"><br>
+                <label for="password_confirm">Confirm Password</label><br>
+                <input type="password" id="password_confirm" placeholder="Confirm Password..." required="required"><br>
                 <div class="error"></div>
             </div>
             
@@ -58,7 +70,7 @@
 
             <br>
 
-            <p>Already registered? <a href="login.html"><strong style="color: #101541;">Sign in now</strong></a></p>
+            <p>Already registered? <a href="login.php"><strong style="color: #101541;">Sign in now</strong></a></p>
         </form>
     </div>
 </body>

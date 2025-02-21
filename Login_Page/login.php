@@ -1,9 +1,11 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register and Login</title>
+    <title>Login</title>
     <script defer src="js/index.js"></script>
     <link rel="stylesheet" href="style/index.css">
 </head>
@@ -23,7 +25,7 @@
 
             <button class="btn" type="submit" name="submit">Login</button>
             <br>
-            <p>Don't have account? <a href="index.html"><strong style="color: #101541;">Sign up now</strong></a></p>
+            <p>Don't have account? <a href="index.php"><strong style="color: #101541;">Sign up now</strong></a></p>
 
         </form>
     </div>
