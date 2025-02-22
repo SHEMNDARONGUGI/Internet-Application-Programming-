@@ -6,19 +6,24 @@ if(isset($_POST["submit"])){
     $email = $_POST["email"];
     $password = $_POST["password"];
     $password_confirm = $_POST["password_confirm"];
-    $duplicate = mysqli_query($cons, "SELECT * FROM login WHERE username ='$username' OR email='$email'");
+    $duplicate = mysqli_query($conn, "SELECT * FROM login WHERE username ='$username' OR email='$email'");
     if(mysqli_num_rows($duplicate) > 0){
         echo"
         <script> alert ('Username or email has already taken')</script> ";
 }
 else{
     if ($password == $password_confirm){
-    $query = "INSERT INTO login VALUES('','$name','$username','$email','$password')";
+    $query = "INSERT INTO login VALUES('$name','$username','$email','$password')";
     mysqli_query($conn,$query);
     echo
-    <script> alert ('Registration Successful')</script> ";
+    "<script> alert ('Registration Successful')</script> ";
+}
+else{
+    echo 
+    "<script> alert ('Password does not match')</script> ";
 }
 }
+
 }
 ?>
 
@@ -45,33 +50,29 @@ else{
             <div class="input-control">
                 <label for="name">Name </label><br>
                 <input type="text" id="name" placeholder="Input your name..."  name="name" required="required"><br>
-                <div class="error"></div>
             </div>
 
             <div class="input-control">
                 <label for="username">Username</label><br>
                 <input type="text" placeholder="username..." id="username" name="username" required="required" required="required"><br>
-                <div class="error"></div>
             </div>
 
             <div class="input-control">
                 <label for="email">Email</label><br>
                 <input type="text" placeholder="Input email..."  name="email" required="required"><br>
-                <div class="error"></div>
             </div>
 
         
 
             <div class="input-control">
                 <label for="password1">Password</label><br>
-                <input type="password" id="password" placeholder="Password" name="password" required="requited"><br>
-                <div class="error"></div>
+                <input type="password" id="password" placeholder="Password" name="password" required="required"><br>
+                
             </div>
 
             <div class="input-control">
                 <label for="password_confirm">Confirm Password</label><br>
-                <input type="password" id="password_confirm" placeholder="Confirm Password..." required="required"><br>
-                <div class="error"></div>
+                <input type="password" id="password_confirm" placeholder="Confirm Password..." required="required" name="password_confirm"><br>
             </div>
             
 
