@@ -11,7 +11,7 @@
 </head>
 <body>
     <div class="login">
-        <form action="">
+        <form action="" method="POST" autocomplete="off">
             <h1>Login</h1>
 
             <!-- Asking for user information -->
