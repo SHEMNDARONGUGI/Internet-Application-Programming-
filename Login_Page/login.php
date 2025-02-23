@@ -16,8 +16,8 @@
 
             <!-- Asking for user information -->
 
-            <label for="username">Username: </label><br>
-            <input type="text" id="username" name="username" placeholder="Input Username..."><br>
+            <label for="username">Username or Email:</label><br>
+            <input type="text" id="username" name="username" placeholder="Input Username or email..."><br>
 
         
             <label for="password1">Password</label><br>
@@ -26,7 +26,7 @@
             <button class="btn" type="submit" name="submit">Login</button>
             <br>
             <p>Don't have account? <a href="index.php"><strong style="color: #101541;">Sign up now</strong></a></p>
-
+    <!-- where I am to start -->
         </form>
     </div>
 </body>
