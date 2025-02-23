@@ -15,6 +15,7 @@ else{
     if ($password == $password_confirm){
     $query = "INSERT INTO login VALUES('$name','$username','$email','$password')";
     mysqli_query($conn,$query);
+    header("Location: login.php");
     echo
     "<script> alert ('Registration Successful')</script> ";
 }
