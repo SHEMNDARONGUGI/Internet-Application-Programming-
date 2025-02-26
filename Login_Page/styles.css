@@ -1,0 +1,132 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif; /* Modern, clean font */
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(120deg, #a1c4fd, #c2e9fb); /* Soft, calming gradient */
+    font-size: 16px;
+}
+
+/* Container for the form */
+.container {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px); /* Glassmorphism effect with higher blur */
+    border-radius: 25px; /* Soft rounded corners for the form container */
+    padding: 40px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2); /* Depth added with shadow */
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    width: 100%;
+    max-width: 400px; /* Limits the container width for smaller screen sizes */
+    animation: fadeIn 0.8s ease-in-out; /* Fade-in effect on load */
+}
+
+/* Form container */
+.form-container {
+    text-align: center;
+}
+
+.form-container h2 {
+    margin-bottom: 25px;
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 700; /* Bolded text for emphasis */
+    letter-spacing: 1px; /* Space between letters for style */
+}
+
+/* Form inputs and button */
+.form input {
+    width: 100%;
+    padding: 12px;
+    margin: 12px 0;
+    border: none;
+    border-radius: 8px; /* Rounded corners for inputs */
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.form input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.form input:focus {
+    background: rgba(255, 255, 255, 0.3); /* Lighter background on focus */
+    box-shadow: 0 0 12px rgba(0, 102, 204, 0.6); /* Focus glow effect */
+    outline: none;
+}
+
+/* Form button */
+.form button {
+    width: 100%;
+    padding: 14px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 8px;
+    background: #3498db; /* A soft, friendly blue */
+    color: white;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.form button:hover {
+    background: #2980b9; /* Darker blue for the hover effect */
+    transform: translateY(-2px); /* Button slightly lifts on hover */
+}
+
+.form-container p {
+    margin-top: 20px;
+    color: #fff;
+    font-size: 0.9rem;
+}
+
+.form-container a {
+    color: #3498db;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.form-container a:hover {
+    color: #2980b9; /* Darker shade on hover */
+}
+
+/* Keyframe for fade-in effect */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Media query for mobile responsiveness */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    .form-container h2 {
+        font-size: 1.6rem; /* Slightly smaller heading on mobile */
+    }
+
+    .form input {
+        font-size: 0.9rem; /* Adjust input text size */
+    }
+
+    .form button {
+        font-size: 1rem;
+    }
+}
+
